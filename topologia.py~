@@ -76,6 +76,6 @@ def topologia():
     net.pingAll()
     net.stop()
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     setLogLevel( 'info' )
     topologia()
