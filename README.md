@@ -1,22 +1,22 @@
-# ProyectoSoftwareLibre
-Creación de topología en Mininet con script en Python
+# ProyectoSoftwareLibre 
+ Creación de topología en Mininet con script en Python 
 
-from mininet.net import Mininet
-from mininet.node import Controller, RemoteController, OVSController
-from mininet.node import CPULimitedHost, Host, Node
-from mininet.node import OVSKernelSwitch, UserSwitch
-from mininet.node import IVSSwitch
-from mininet.cli import CLI
-from mininet.log import setLogLevel, info
-from mininet.link import TCLink, Intf
-from subprocess import call
-from mininet.util import dumpNodeConnections
-//ESTOS SON LOS IMPORTS QUE SE USARON PARA EL DESARROLLO DEL SCRIPT
+               
+    from mininet.node import OVSKernelSwitch, UserSwitch
+    from mininet.node import IVSSwitchfrom mininet.net import Mininet
+    from mininet.node import Controller, RemoteController, OVSController
+    from mininet.node import CPULimitedHost, Host, Node
+    from mininet.cli import CLI
+    from mininet.log import setLogLevel, info
+    from mininet.link import TCLink, Intf
+    from subprocess import call
+    from mininet.util import dumpNodeConnections
+    //ESTOS SON LOS IMPORTS QUE SE USARON PARA EL DESARROLLO DEL SCRIPT
 
-def topologia(): //CREACION DEL ENCABEZADO CON EL NOMBRE DE LA FUNCIÓN *topologia()* PARA LA CREACIÓN DE LOS HOST, LOS SWITCH Y SUS CONEXIONES 
-net = Mininet( topo=None, 
-               build=False,
-               ipBase='212.18.0.0/24') //USANDO LA IP BASE QUE SE ASIGNARA A LOS HOST
+    def topologia(): //CREACION DEL ENCABEZADO CON EL NOMBRE DE LA FUNCIÓN *topologia()* PARA LA CREACIÓN DE LOS HOST, LOS SWITCH Y SUS CONEXIONES 
+    net = Mininet( topo=None,
+                   build=False,
+                   ipBase='212.18.0.0/24') //USANDO LA IP BASE QUE SE ASIGNARA A LOS HOST
                
     info( '*** Agregar controladores\n' ) //TEXTO INFORMATIVO DE LA AGREGACION DE LOS CONTROLADORES 
     info( '*** Agregar switches\n') //TEXTO INFORMATIVO DE LA AGREGACION DE LOS SWITCHES
@@ -76,7 +76,7 @@ net = Mininet( topo=None,
     net.pingAll() //FUNCION QUE REALIZA PING ENTRE TODOS LOS HOST 
     net.stop() //FUNCION QUE DETIENE LA EJECUCION DE LA TOPOLOGIA 
 
-if _name_ == '_main_':
+    if _name_ == '_main_':
     setLogLevel( 'info' )
     topologia() 
 
